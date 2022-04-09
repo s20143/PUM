@@ -31,7 +31,7 @@ def main():
 	with left:
 		sex_radio = st.radio( "Płeć", list(sex_d.keys()), format_func=lambda x : sex_d[x] )
 		embarked_radio = st.radio( "Port zaokrętowania", list(embarked_d.keys()), index=2, format_func= lambda x: embarked_d[x] )
-                pclass_radio = st.radio( "Rozpoczęcie podróży", list(pclass_d.keys()), format_func=lambda x : sex_d[x] )
+                pclass_radio = st.radio( "Rozpoczęcie podróży", list(pclass_d.keys()), format_func=lambda x : pclass_d[x] )
 	with right:
 		age_slider = st.slider("Wiek", value=1, min_value=0.42, max_value=80)
 		sibsp_slider = st.slider("Liczba rodzeństwa i/lub partnera", min_value=0, max_value=8)
