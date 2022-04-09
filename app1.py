@@ -23,7 +23,7 @@ def main():
     left, right = st.columns(2)
     prediction = st.container()
 
-    st.image("https://pl.wikipedia.org/wiki/RMS_Titanic#/media/Plik:RMS_Titanic_3.jpg")
+    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/RMS_Titanic_3.jpg/1280px-RMS_Titanic_3.jpg")
 
     with overview:
         st.title("Titanic")
