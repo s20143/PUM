@@ -33,10 +33,10 @@ def main():
         embarked_radio = st.radio( "Port zaokrętowania", list(embarked_d.keys()), index=2, format_func= lambda x: embarked_d[x] )
         pclass_radio = st.radio( "Klasa", list(pclass_d.keys()), format_func=lambda x : pclass_d[x] )
     with right:
-        age_slider = st.slider("Wiek", value=1, min_value=0.42, max_value=80)
+        age_slider = st.slider("Wiek", value=1, min_value=1, max_value=80)
         sibsp_slider = st.slider("Liczba rodzeństwa i/lub partnera", min_value=0, max_value=8)
         parch_slider = st.slider("Liczba rodziców i/lub dzieci", min_value=0, max_value=6)
-        fare_slider = st.slider("Cena biletu", min_value=0, max_value=512.3292, step=1)
+        fare_slider = st.slider("Cena biletu", min_value=0, max_value=513, step=1)
 
     data = [[pclass_radio, sex_radio,  age_slider, sibsp_slider, parch_slider, fare_slider, embarked_radio]]
     survival = model.predict(data)
